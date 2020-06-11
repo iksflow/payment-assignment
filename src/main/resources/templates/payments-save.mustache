@@ -1,0 +1,35 @@
+{{>layout/header}}
+<h1>결제정보 입력</h1>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="cardNo">카드번호</label>
+                <input type="text" class="form-control" id="cardNo" placeholder="카드번호 10~16자리">
+            </div>
+            <div class="form-group">
+                <label for="validYm">유효기간</label>
+                <input type="text" class="form-control" id="validYm" placeholder="유효기간(MMYY)">
+            </div>
+            <div class="form-group">
+                <label for="cvcNo">CVC</label>
+                <input type="text" class="form-control" id="cvcNo" placeholder="CVC(3자리)">
+            </div>
+            <div class="form-group">
+                <label for="istmtAmt">할부개월수</label>
+                <input type="text" class="form-control" id="istmtAmt" placeholder="할부기간(0~12)">
+            </div>
+            <div class="form-group">
+                <label for="payAmt">결제금액</label>
+                <input type="text" class="form-control" id="payAmt" placeholder="100 ~ 1,000,000,000">
+            </div>
+            <div class="form-group">
+                <label for="vatAmt">부가가치세</label>
+                <input type="text" class="form-control" id="vatAmt">
+            </div>
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+    </div>
+</div>
+{{>layout/footer}}

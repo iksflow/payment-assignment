@@ -1,0 +1,32 @@
+{{>layout/header}}
+    <h1>Rest API 기반 결제시스템</h1>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/payment/save" role="button" class="btn btn-primary">글 등록</a>
+            </div>
+        </div>
+        <br>
+        <table class="table table-horizontal table-bordered">
+            <thead class="thead-strong">
+                <tr>
+                    <th>결제번호</th>
+                    <th>카드번호</th>
+                    <th>결제금액</th>
+                    <th>부가가치세</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            {{#payment}}
+                <tr>
+                    <td>{{payNo}}</td>
+                    <td>{{cardNo}}</td>
+                    <td>{{payAmt}}</td>
+                    <td>{{vatAmt}}</td>
+                </tr>
+            {{/payment}}
+            </tbody>
+        </table>
+    </div>
+
+{{>layout/footer}}
